@@ -1,0 +1,14 @@
+<div fxLayout="row" fxLayoutGap="20px">
+  <button *ngIf="isMobileOrTablet" mat-icon-button (click)="clickNav.emit()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <h1 class="app-name">Gas E-Commerce</h1>
+  <button mat-button *ngIf="!isMobileOrTablet" (click)="showMenu()">
+    Menu
+  </button>
+</div>
+<div *ngIf="isShowMenu" class="menu-overlap">
+    <div class="menu-content">
+        menut
+    </div>
+</div>

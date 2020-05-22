@@ -4,17 +4,21 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { ShareModule } from './share/share.module';
+import { UtilsService } from './utility/utils.service';
+import { NavBarComponent } from './common-app/nav-bar/nav-bar.component';
+import { FooterComponent } from './common-app/footer/footer.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, NavBarComponent, FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ShareModule,
+    FlexLayoutModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [UtilsService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

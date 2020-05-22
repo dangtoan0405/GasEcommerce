@@ -1,0 +1,30 @@
+@import 'src/colors';
+.menu-overlap {
+  position: fixed;
+  top: 60px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 500;
+  overflow: hidden auto;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  .menu-content{
+    display: inline-block;
+    text-align: left;
+    top: 60px;
+    max-width: 100%;
+    cursor: default;
+    background-color: white;
+    border: 0px;
+    border-radius: 0px;
+    margin: 0px;
+    overflow-x: auto;
+    padding: 0px;
+    position: fixed;
+    left: 0px;
+    width: 100%;
+    color: $BLACK;
+  }
+}
