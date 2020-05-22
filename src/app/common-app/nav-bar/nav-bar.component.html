@@ -3,12 +3,23 @@
     <mat-icon>menu</mat-icon>
   </button>
   <h1 class="app-name">Gas E-Commerce</h1>
-  <button mat-button *ngIf="!isMobileOrTablet" (click)="showMenu()">
+  <button mat-button *ngIf="!isMobileOrTablet" [matMenuTriggerFor]="menu">
     Menu
   </button>
 </div>
-<div *ngIf="isShowMenu" class="menu-overlap">
-    <div class="menu-content">
-        menut
-    </div>
-</div>
+<mat-menu id="menu" #menu="matMenu" [backdropClass]="'customize'">
+  <div id="menu-items">
+    <button mat-menu-item>
+      <mat-icon>dialpad</mat-icon>
+      <span>Redial</span>
+    </button>
+    <button mat-menu-item disabled>
+      <mat-icon>voicemail</mat-icon>
+      <span>Check voice mail</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>notifications_off</mat-icon>
+      <span>Disable alerts</span>
+    </button>
+  </div>
+</mat-menu>

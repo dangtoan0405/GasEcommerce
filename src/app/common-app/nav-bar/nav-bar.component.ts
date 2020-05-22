@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
-import { UtilsService } from 'src/app/utility/utils.service';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
 
 @Component({
   selector: 'app-nav-bar',
@@ -9,12 +9,7 @@ import { UtilsService } from 'src/app/utility/utils.service';
 export class NavBarComponent implements OnInit {
   @Output() clickNav = new EventEmitter<any>();
   @Input() isMobileOrTablet: boolean;
-  isShowMenu: boolean;
-  constructor() {}
-
+  constructor(private bottomSheet: MatBottomSheet) {}
   ngOnInit(): void {}
 
-  showMenu() {
-    this.isShowMenu = !this.isShowMenu;
-  }
 }

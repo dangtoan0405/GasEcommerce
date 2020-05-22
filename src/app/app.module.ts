@@ -10,13 +10,17 @@ import { NavBarComponent } from './common-app/nav-bar/nav-bar.component';
 import { FooterComponent } from './common-app/footer/footer.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
-  declarations: [AppComponent, NavBarComponent, FooterComponent],
+  declarations: [
+    AppComponent,
+    NavBarComponent,
+    FooterComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ShareModule,
-    FlexLayoutModule
+    FlexLayoutModule,
   ],
   providers: [UtilsService],
   bootstrap: [AppComponent],
