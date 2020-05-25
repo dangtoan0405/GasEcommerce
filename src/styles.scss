@@ -8,17 +8,26 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-mat-toolbar {
-  background-color: $RED !important;
-  color: $WHITE !important;
-  font-weight: bold;
-}
-mat-sidenav-container {
-  max-width: 1360px;
-  margin: auto;
-}
-mat-sidenav {
-  width: 250px;
+.app-container {
+  .main-container{
+    top: 65px;
+  }
+
+  mat-toolbar {
+    background-color: $RED !important;
+    color: $WHITE !important;
+    font-weight: bold;
+    height: 65px;
+    position: fixed;
+    z-index: 1000;
+  }
+  mat-sidenav-container {
+    max-width: 1360px;
+    margin: auto;
+  }
+  mat-sidenav {
+    width: 250px;
+  }
 }
 
 .cdk-overlay-container .customize + * > .cdk-overlay-pane {
@@ -26,7 +35,7 @@ mat-sidenav {
   left: 0;
   right: 0;
   top: 65px !important;
-  .mat-menu-panel{
+  .mat-menu-panel {
     min-width: 100%;
   }
 }
